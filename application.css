@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    
+    
+    color: white;
+    font-family: helvetica;
+}
+
+header {
+    background: url("assets/table_rock.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.profile-img {
+    float: left;
+}
