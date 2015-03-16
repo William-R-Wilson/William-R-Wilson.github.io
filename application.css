@@ -17,6 +17,7 @@ header {
     background-position: center;
     background-size: cover;
     -moz-background-size: cover;
+    -webkit-background-size: cover;
     min-height: 100%;
     color: white;
     
@@ -24,9 +25,12 @@ header {
 
 .profile-img {
     float: left;
-    padding: 10px;
-    border: 7px solid white;
-    border-radius: 20px;
+    margin: 25px;
+    border: 20px solid black;
+    border-radius: 40px;
+    -moz-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
 h1 {
@@ -36,4 +40,8 @@ h1 {
 .tagline {
     padding: 25px;
     margin-top: 100px;
+}
+
+ul {
+    margin-left: 10px;
 }
