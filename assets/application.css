@@ -28,6 +28,13 @@ header {
     box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 
+.project-img {
+    float: left;
+    margin-left: 100px;
+    margin-top: 25px;
+}
+
+
 h1 {
     padding-top: 250px;
     font-size: 70px;
