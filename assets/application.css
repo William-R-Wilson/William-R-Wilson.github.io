@@ -32,17 +32,13 @@ header {
 .project-img-container {
     float: left;
     margin: 25px;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 .project-img-container img {
     width: 100%;
     height: auto;
-
-h1 {
-    padding-top: 250px;
-    font-size: 70px;
 }
 
 .tagline {
