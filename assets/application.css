@@ -21,6 +21,11 @@ header {
     
 }
 
+h1 {
+    padding-top: 250px;
+    font-size: 70px;
+ }
+
 .profile-img {
     float: left;
     margin-left: 100px;
