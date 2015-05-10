@@ -1,0 +1,41 @@
+.container {
+  background-color: black;
+  border: 1px solid gray;
+  max-width: 215px;
+  margin-left: 20px;
+}
+
+.row {
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 4px;
+  position: relative;
+}
+
+.divider {
+  height: 20px;
+}
+
+
+.button {
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  margin-left: 4px;
+  float: none;
+}
+.button:active {
+  border: 1px solid gray;
+}
+
+
+#screen {
+  margin: 5px;
+  background-color: white;
+  height: 40px;
+  width: 190px;
+  text-align: right;
+  vertical-align: bottom;
+  font-size: 30px;
+}

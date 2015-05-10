@@ -1,0 +1,55 @@
+<!doctype HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8" />
+  <script src="assets/javascript/calculator.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/calculator.css">
+  <link href="assets/css/application.css" rel="stylesheet">
+  <link href="assets/css/normalize.css" rel="stylesheet">
+  
+
+  <title>Javascript Calculator</title>
+</head>
+
+<body>
+
+  <p>This is a simple calculator, made with basic CSS, JavaScript, and HTML.  It performs basic arithmetic functions on two numbers.</p>
+
+<div class = "container">
+
+  <div class = "row">
+  <div id = "screen"></div>
+  </div>
+  <div class = "divider"></div>
+  <div class = "row">    
+    <span class = "button" onclick="getValue(1)">1</span>
+    <span class = "button" onclick="getValue(2)">2</span>
+    <span class = "button" onclick="getValue(3)">3</span>
+    <span class = "button" onclick="getOperation('/')">/</span>
+    <span class = "button" onclick="clearAll()">CE</span>
+  </div>
+  <div class = "row">
+    <span class = "button" onclick="getValue(4)">4</span>
+    <span class = "button" onclick="getValue(5)">5</span>
+    <span class = "button" onclick="getValue(6)">6</span>
+    <span class = "button" onclick="getOperation('*')">*</span>
+       <span class = "button" onclick = "clearScreen()">C</span>
+  </div>
+  <div class = "row">
+    <span class = "button" onclick="getValue(7)">7</span>
+    <span class = "button" onclick="getValue(8)">8</span>
+    <span class = "button" onclick="getValue(9)">9</span>
+    <span class = "button" onclick = "getOperation('-')">-</span>
+  </div>
+    <div class = "row">
+      <span class = "button" onclick="getValue(0)">0</span>
+    <span class = "button" onclick = "getValue('.')">.</span>
+    <span class = "button" onclick = "getOperation('+')">+</span>
+ 
+      <span class = "button" onclick = "calculate()">=</span>
+  </div>
+  <div class = "divider"></div>
+ 
+</div>
+</body>
+</html>
