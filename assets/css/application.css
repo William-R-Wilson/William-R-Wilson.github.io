@@ -39,8 +39,16 @@ h1 {
     float: left;
     margin: 25px;
     max-width: 250px;
+    height: auto;
+}
+
+.project-img-container img {
+    float: left;
+    margin: 25px;
+    max-width: 250px;
     max-height: 250px;
 }
+
 
 
 .tagline {
