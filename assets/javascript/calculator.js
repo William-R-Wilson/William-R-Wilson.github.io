@@ -35,6 +35,11 @@ function clearAll(){
   document.getElementById("screen").innerHTML = output;
 }
 
+function backSpace(){
+  output = output.substring(0, output.length - 1);
+  document.getElementById("screen").innerHTML = output;
+}
+
 function calculate(){
   values.push(parseFloat(output));
   console.log(values);
