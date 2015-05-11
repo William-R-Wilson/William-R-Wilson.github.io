@@ -4,7 +4,12 @@ var values = [];
 var result = 0;
 
 function getValue(val){
+  if (output.length <= 9){
   output += val.toString();
+  }
+  else {
+    return output;
+  }
   document.getElementById("screen").innerHTML = output;
 }
 
@@ -36,25 +41,25 @@ function calculate(){
   console.log(op);
   switch(op){
     case "*":
-      result = values[0]*values[1];
+      result = (values[0]*values[1]).toFixed(2);
       document.getElementById("screen").innerHTML = result;
       values = [];
       output = "";
       break;
     case "+":
-      result = values[0] + values[1];
+      result = (values[0] + values[1]).toFixed(2);
       document.getElementById("screen").innerHTML = result;
       values = [];
       output = "";
       break;
     case "/":
-      result = values[0]/values[1];
+      result = (values[0]/values[1]).toFixed(2);
       document.getElementById("screen").innerHTML = result;
       values = [];
       output = "";
       break;
     case "-":
-      result = values[0]-values[1];
+      result = (values[0]-values[1]).toFixed(2);
       console.log(result);
       document.getElementById("screen").innerHTML = result;
       values = [];
