@@ -10,7 +10,7 @@ body {
 
 header {
     text-align: center;
-    background: url("assets/images/sunset.jpg");
+    background-image: url("../images/sunset.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -43,11 +43,6 @@ h1 {
     clear: right;
 }
 
-.project-img-container img {
-    width: 100%;
-    height: auto;
-    clear: right;
-}
 
 .tagline {
     padding: 25px;
