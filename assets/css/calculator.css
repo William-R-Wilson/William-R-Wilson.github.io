@@ -1,9 +1,12 @@
+
+
 .container {
   background-color: black;
-  border: 1px solid gray;
-  max-width: 215px;
+  max-width: 230px;
   margin-left: 20px;
   box-shadow: 10px 10px 5px gray;
+  border-left: 15px solid gray;
+  border-top: 15px solid gray;
 }
 
 .row {
