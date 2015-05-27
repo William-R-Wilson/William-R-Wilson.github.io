@@ -5,8 +5,8 @@
   max-width: 230px;
   margin-left: 20px;
   box-shadow: 10px 10px 5px gray;
-  border-left: 15px solid gray;
-  border-top: 15px solid gray;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
 }
 
 .row {
