@@ -121,6 +121,14 @@ aside {
     background-color: transparent;
 }
 
+.footer {
+    text-transform: uppercase;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: 700;
+    color: #f05f40;    
+    font-size: 13px;
+}
+
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
@@ -473,4 +481,14 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+.contact_image {
+    height: 40px;
+    width: 40px;
+}
+
+#contact li {
+    display: inline-block;
+    color: #F05F40;
 }

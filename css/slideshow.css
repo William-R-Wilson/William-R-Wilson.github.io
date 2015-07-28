@@ -1,0 +1,46 @@
+#MainDiv
+{
+    position: relative;
+    width:800px;
+}
+
+#child .NextButton
+{
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    top: 50%;
+    right: 2%;
+}
+
+#child .PreButton
+{
+    position: absolute;
+    height: 5%;
+    width: 5%;
+    top: 50%;
+    left: 2%;
+}
+
+#slider
+{
+    width: 800px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10%;
+}
+
+    #slider .slides
+    {
+        display: block;
+        width: 8000px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #slider .slide
+    {
+        float: left;
+        list-style-type: none;
+        height:120px;
+    }
