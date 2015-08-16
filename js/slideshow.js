@@ -11,31 +11,33 @@ var images = [
 
 
 var currentImage = 0;
+var length = images.length;
 
 var display = function(num){
-		document.getElementById("image").src = images[num].source;
+		document.getElementById("slide").src = images[num].source;
 		document.getElementById("text").innerHTML = images[num].text;	
 };
 
 var goLeft = function() {
-	currentImage -= 1;
-	display(currentImage);
+	if (currentImage === 0) {
+		currentImage = length - 1;
+		display(currentImage);
+	}
+	else {
+		currentImage -= 1;
+		display(currentImage);
+	}
+	console.log(currentImage);
 };
 
 var goRight = function(){
-	currentImage += 1
-	display(currentImage);
-};
-
-var wrap = function(){
-	//when you get to the end of the images, start over
-   var numberOfImages = images.length;
-	if (currentImage === numberOfImages-1) {
+	if (currentImage === length - 1) {
 		currentImage = 0;
+		display(currentImage);
 	}
-	if (currentImage === 0) {
-		currentImage = numberOfImages-1;
+	else {
+		currentImage += 1;
+		display(currentImage);
 	}
+	console.log(currentImage);
 };
-
-
