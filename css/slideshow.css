@@ -6,7 +6,7 @@
 	margin-top: 30px;
 	width: 100%;
 }
-
+/*
 button {
    border-top: 1px solid #0a1821;
    background: #d3e1eb;
@@ -37,7 +37,7 @@ button:active {
    border-top-color: #1b435e;
    background: #1b435e;
    }
-
+*/
 #left {
 	float: left;
 }
