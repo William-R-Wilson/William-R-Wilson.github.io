@@ -82,14 +82,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Custom Expense and Time Reporting</h2>
+                    <h2 class="section-heading">Facility Rental</h2>
                     <p>A custom web application, built with Ruby on Rails, deployed and in use.  To see it in action,
                       <a class="page-scroll" href="#contact">contact me!</a></p>
-                    <p>I built this application for two purposes:  to practice some web fundamentals, and
-                    to ease some pain points in how the organization was doing things.  Rather than using a responsive
-                    framework like Bootstrap, I built custom responsive CSS.  The authorization and authentication are also custom
-                    coded.  Recently I added a smidgen of AJAX and jQuery on the top to improve the user experience.
-                    I plan on connecting it with Quickbooks soon, using xml and the <a href="https://github.com/qbwc/qbwc">qbwc gem</a>.</p>
+                    <p>I built this app to streamline the workflow for an organization that rents its facilities
+                      out to groups.  It uses Devise for authentication and Bootstrap for layout.  I plan on connecting it
+                    with Quickbooks soon, using xml and the <a href="https://github.com/qbwc/qbwc">qbwc gem</a>.</p>
                 </div>
             </div>
         </div>
@@ -101,8 +99,8 @@
         <div class = "col-lg-6 col-lg-offset-3 text-center">
     	        <button onclick = "goLeft()" id = "left"> <<< </button>
                 <button onclick = "goRight()" id = "right"> >>> </button>
-                <blockquote id = "text">Custom authorization provides access to functions based on the user's role</blockquote>
-                <img id = "slide" src = "assets/images/reporting/user view.png" />
+                <h3 id = "text">Calendar view allows you to see all scheduled visitors</h3>
+                <img id = "slide" src = "assets/images/booking/calendar_view.png" />
         </div>
     	</div>
     </section>
@@ -147,7 +145,7 @@
     <script src="js/creative.js"></script>
 
     <!-- slideshow JavaScript -->
-    <script src="js/slideshow.js"></script>
+    <script src="js/bookingslideshow.js"></script>
 
 </body>
 

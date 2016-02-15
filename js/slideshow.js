@@ -1,8 +1,8 @@
 
 
 var images = [
-                {source: "assets/images/reporting/user view.png", text: "Users only access the actions they need"},
-                {source: "assets/images/reporting/admin view.png", text: "Administrators are authorized to do additional actions through custom authorization"},
+                {source: "assets/images/reporting/user view.png", text: "Custom authorization provides access to functions based on the user's role"},
+                {source: "assets/images/reporting/admin view.png", text: "Administrators are authorized to do additional actions"},
                 {source: "assets/images/reporting/dashboard.png", text: "Call up reports by period"},
                 {source: "assets/images/reporting/printable view.png", text: "Then print out the reports.  Printable view created with custom CSS"},
                 {source: "assets/images/reporting/responsive.png", text: "Custom responsive CSS ensures that users can report via mobile devices"},
@@ -15,7 +15,7 @@ var length = images.length;
 
 var display = function(num){
 		document.getElementById("slide").src = images[num].source;
-		document.getElementById("text").innerHTML = images[num].text;	
+		document.getElementById("text").innerHTML = images[num].text;
 };
 
 var goLeft = function() {
