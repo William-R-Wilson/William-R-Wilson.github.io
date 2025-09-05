@@ -13,9 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +1 find_or_create_by.md
-badd +3 index.md
-badd +0 things_i_dislike_about_rails.md
+badd +0 find_or_create_by.md
 argglobal
 %argdel
 edit find_or_create_by.md
@@ -25,10 +23,6 @@ set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
-wincmd w
-wincmd _ | wincmd |
-split
-1wincmd k
 wincmd w
 let &splitbelow = s:save_splitbelow
 let &splitright = s:save_splitright
@@ -40,10 +34,7 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 31 + 68) / 136)
-exe '2resize ' . ((&lines * 20 + 22) / 44)
 exe 'vert 2resize ' . ((&columns * 104 + 68) / 136)
-exe '3resize ' . ((&lines * 20 + 22) / 44)
-exe 'vert 3resize ' . ((&columns * 104 + 68) / 136)
 argglobal
 enew
 file NERD_tree_tab_1
@@ -58,7 +49,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt index.md
+balt find_or_create_by.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -69,42 +60,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 10) / 20)
+let s:l = 37 - ((23 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 032|
-wincmd w
-argglobal
-if bufexists(fnamemodify("things_i_dislike_about_rails.md", ":p")) | buffer things_i_dislike_about_rails.md | else | edit things_i_dislike_about_rails.md | endif
-if &buftype ==# 'terminal'
-  silent file things_i_dislike_about_rails.md
-endif
-balt index.md
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 10) / 20)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 1
+keepjumps 37
 normal! 0
 wincmd w
-3wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 68) / 136)
-exe '2resize ' . ((&lines * 20 + 22) / 44)
 exe 'vert 2resize ' . ((&columns * 104 + 68) / 136)
-exe '3resize ' . ((&lines * 20 + 22) / 44)
-exe 'vert 3resize ' . ((&columns * 104 + 68) / 136)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

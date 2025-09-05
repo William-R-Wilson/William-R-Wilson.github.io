@@ -18,9 +18,9 @@ Patient.find_or_create_by(
     )
 ```
 
-Now imagine that this Patient already exists in the daabase, but this time they have changed their work phone number, or added a second phone number, or changed their apartment number, or moved completely acress town.  In this case, `find_or_create_by` won't find a record with the given params, so it will attempt to create a new record.  Now you have a duplicate record for the same person. 
+Now imagine that this Patient already exists in the database, but this time they have changed their work phone number, or added a second phone number, or changed their apartment number, or moved completely acress town.  In this case, `find_or_create_by` won't find a record with the given params, so it will attempt to create a new record.  Now you have a duplicate record for the same person. 
 
-If you've done a minimal level of record validation, the attempt to add the record might fail because of a unqueness constraint on some combination of attributes or some other constraint. While this avoids the duplicate data issue, now you have a user experience problem because the user entered all this data only to get an error back.
+If you've done some minimal level of record validation, the attempt to add the record might fail because of a unqueness constraint on some combination of attributes or some other constraint. While this avoids the duplicate data issue, now you have a user experience problem because the user entered all this data only to get an error back.
 
 Another way I've seen `find_or_create_by` used is more likely to avoid duplicate creation, but also more likely to introduce subtle bugs: 
 
@@ -31,7 +31,7 @@ Patient.find_or_create_by(telephone1: params[:telephone1]) do |p|
 	...
 ```
 
-This approach will find the telephone number if it exists in the database, and return the patient object associated with that number. But if the patient has updated their work phone or apartment number, this approach will not update the record with any new data that has been entered.  
+This approach will find the telephone number if it exists in the database, and it will return the patient object associated with that number. But if the patient has updated their work phone or apartment number, this approach will not update the record with any new data that has been entered.  
 
 Depending on how the rest of the application has been implemented, you could end up with some pretty subtle bugs from using `find_or_create_by`, especially if programmatic behavior depends on data.  Imagine accidentally creating two different `Client` records, with the only difference being `time_zone`.  Which Client do you attach payments to?  Is your client now receiving reports at two different times of day? etc. 
 
