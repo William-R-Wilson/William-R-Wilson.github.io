@@ -13,12 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
+badd +1 find_or_create_by.md
 badd +3 index.md
-badd +5 about.md
 badd +0 things_i_dislike_about_rails.md
 argglobal
 %argdel
-edit things_i_dislike_about_rails.md
+edit find_or_create_by.md
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -47,7 +47,7 @@ exe 'vert 3resize ' . ((&columns * 104 + 68) / 136)
 argglobal
 enew
 file NERD_tree_tab_1
-balt index.md
+balt find_or_create_by.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -58,6 +58,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
+balt index.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -68,19 +69,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 10) / 20)
+let s:l = 1 - ((0 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
-normal! 0124|
+keepjumps 1
+normal! 032|
 wincmd w
 argglobal
-if bufexists(fnamemodify("index.md", ":p")) | buffer index.md | else | edit index.md | endif
+if bufexists(fnamemodify("things_i_dislike_about_rails.md", ":p")) | buffer things_i_dislike_about_rails.md | else | edit things_i_dislike_about_rails.md | endif
 if &buftype ==# 'terminal'
-  silent file index.md
+  silent file things_i_dislike_about_rails.md
 endif
-balt about.md
+balt index.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -91,13 +92,14 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 3 - ((2 * winheight(0) + 10) / 20)
+let s:l = 1 - ((0 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 3
-normal! 065|
+keepjumps 1
+normal! 0
 wincmd w
+3wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 68) / 136)
 exe '2resize ' . ((&lines * 20 + 22) / 44)
 exe 'vert 2resize ' . ((&columns * 104 + 68) / 136)
