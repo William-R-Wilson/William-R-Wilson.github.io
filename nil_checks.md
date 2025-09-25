@@ -1,4 +1,4 @@
-# nil checks
+# nil Checks
 
 Any time I see `nil` checks in a Rails app, I question the app design.
 

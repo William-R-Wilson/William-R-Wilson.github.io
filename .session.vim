@@ -13,11 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +11 nil_checks
-badd +0 about.md
+badd +4 index.md
+badd +0 nil_checks.md
 argglobal
 %argdel
-edit about.md
+edit nil_checks.md
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -39,6 +39,7 @@ exe 'vert 2resize ' . ((&columns * 104 + 68) / 136)
 argglobal
 enew
 file NERD_tree_tab_1
+balt index.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -49,7 +50,7 @@ setlocal fdn=20
 setlocal nofen
 wincmd w
 argglobal
-balt nil_checks
+balt index.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -60,12 +61,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 5 - ((4 * winheight(0) + 20) / 41)
+let s:l = 1 - ((0 * winheight(0) + 20) / 41)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
-normal! 0
+keepjumps 1
+normal! 07|
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 68) / 136)
@@ -85,6 +86,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
