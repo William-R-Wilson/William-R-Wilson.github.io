@@ -13,11 +13,10 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +4 index.md
-badd +0 nil_checks.md
+badd +7 index.md
 argglobal
 %argdel
-edit nil_checks.md
+edit index.md
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -34,23 +33,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 31 + 68) / 136)
-exe 'vert 2resize ' . ((&columns * 104 + 68) / 136)
+exe 'vert 1resize ' . ((&columns * 63 + 63) / 126)
+exe 'vert 2resize ' . ((&columns * 62 + 63) / 126)
 argglobal
-enew
-file NERD_tree_tab_1
-balt index.md
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal nofen
-wincmd w
-argglobal
-balt index.md
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -61,16 +46,27 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 20) / 41)
+let s:l = 7 - ((6 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 07|
+keepjumps 7
+normal! 0
+lcd ~/William-R-Wilson.github.io
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 31 + 68) / 136)
-exe 'vert 2resize ' . ((&columns * 104 + 68) / 136)
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+wincmd w
+exe 'vert 1resize ' . ((&columns * 63 + 63) / 126)
+exe 'vert 2resize ' . ((&columns * 62 + 63) / 126)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
