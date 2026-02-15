@@ -1,6 +1,6 @@
 ## Are LLMs Suddenly Better?
 
-https://shumer.dev/something-big-is-happening
+[https://shumer.dev/something-big-is-happening](https://shumer.dev/something-big-is-happening)
 
 I saw this blog post shared on the socials.  At first, I felt the emotions the author was trying to evoke - a little bit of fear for my job, worry about the future if millions of white collar workers get laid off, a feeling that I need to jump on the AI train and learn all I can about how to prompt these tools into actually working.
 

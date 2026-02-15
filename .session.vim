@@ -13,10 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +22 why_i_rarely_use_ai.md
+badd +7 index.md
+badd +3 are-llms-suddenly-better.md
 argglobal
 %argdel
-edit why_i_rarely_use_ai.md
+edit are-llms-suddenly-better.md
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -28,12 +29,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 22 - ((21 * winheight(0) + 18) / 36)
+let s:l = 3 - ((2 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 22
-normal! 0
+keepjumps 3
+normal! 094|
 lcd ~/William-R-Wilson.github.io
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
