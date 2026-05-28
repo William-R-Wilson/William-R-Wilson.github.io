@@ -13,10 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +5 index.md
+badd +8 index.md
+badd +4 on_booleans.md
 argglobal
 %argdel
-edit index.md
+edit on_booleans.md
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -28,12 +29,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 5 - ((4 * winheight(0) + 18) / 36)
+let s:l = 4 - ((3 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 5
-normal! 032|
+keepjumps 4
+normal! 02|
 lcd ~/William-R-Wilson.github.io
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'

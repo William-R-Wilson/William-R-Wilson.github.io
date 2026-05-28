@@ -1,9 +1,9 @@
 ## On Booleans
 
 > *I played in a death metal band. People either loved us or they hated us. Or they thought we were OK*.
->  - Mitch Hedberg
+> Mitch Hedberg
 
-tl;dr: Use affirmative names for booleans, and enforce true booleans (most of the time)
+tl;dr: Use affirmative names for booleans, and enforce boolean types (most of the time)
 
 Booleans are generally recognized as having 2 possible values: `true` or `false`.  Boolean logic depends on this characteristic: 
 
