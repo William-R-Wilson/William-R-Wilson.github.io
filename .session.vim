@@ -14,7 +14,7 @@ else
   set shortmess=aoO
 endif
 badd +8 index.md
-badd +4 on_booleans.md
+badd +95 on_booleans.md
 argglobal
 %argdel
 edit on_booleans.md
@@ -29,12 +29,17 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 4 - ((3 * winheight(0) + 18) / 36)
+let s:l = 95 - ((33 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 4
-normal! 02|
+keepjumps 95
+let s:c = 85 - ((61 * winwidth(0) + 63) / 126)
+if s:c > 0
+  exe 'normal! ' . s:c . '|zs' . 85 . '|'
+else
+  normal! 085|
+endif
 lcd ~/William-R-Wilson.github.io
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -49,7 +54,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

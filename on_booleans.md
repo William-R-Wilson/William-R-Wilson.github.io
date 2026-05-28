@@ -52,7 +52,7 @@ irb(main):030> puts "Please renew your subscription" if response2[:account_disab
 
 Ruby has lots of handy coercion methods to convert a value ot a string, integer, array, etc, but there is no built in way to convert a `nil` value to Boolean (you can use ActiveModel, but that doesn't come out of the box).
 
-Ruby does treat nil as `falsey`, which helps somewhat:
+Ruby does treat `nil` as `falsey`, which helps somewhat:
 ```ruby
 irb(main):033* if response1[:account_disabled] && response2[:account_disabled]
 irb(main):034*   puts "both accounts disabled"
@@ -90,7 +90,7 @@ An affirmative name for the boolean, and affirmative assertions (`if` instead of
 
 ### avoid nil booleans
 
-A nil value for a boolean is basically meaningless. You don't know if it should be true or false and just has been missed or corrupted.  There are some cases where you might want to specify that the value hasn't been assigned  (although I'd argue that an enum is better for this case than a boolean).  In Ruby, `nil` will evaluate to false, regardless. So you should enforce boolean types.
+A `nil` value for a boolean is basically meaningless. You don't know if it should be `true` or `false` and just has been missed or corrupted.  There are some cases where you might want to specify that the value hasn't been assigned  (although I'd argue that an enum is better for this case than a boolean).  In Ruby, `nil` will evaluate to `false`, regardless. So you should enforce boolean types.
 
 If you're using a database, ensure that any boolean values have a default value of `false` and a null constraint.  You can also validate some json.  
 
